@@ -39,7 +39,7 @@ if (ENVIRONMENT_IS_NODE) {
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /run/user/1000/tmp01e9klwm.js
+// include: /run/user/1000/tmp8grojvb_.js
 
   if (!Module.expectedDataFileDownloads) {
     Module.expectedDataFileDownloads = 0;
@@ -148,10 +148,14 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
       function assert(check, msg) {
         if (!check) throw msg + new Error().stack;
       }
+Module['FS_createPath']("/", "Ui", true, true);
+Module['FS_createPath']("/Ui", "Health", true, true);
 Module['FS_createPath']("/", "characters", true, true);
 Module['FS_createPath']("/characters", "enemy", true, true);
 Module['FS_createPath']("/characters", "frog", true, true);
-Module['FS_createPath']("/", "nature_tileset", true, true);
+Module['FS_createPath']("/", "music", true, true);
+Module['FS_createPath']("/", "props", true, true);
+Module['FS_createPath']("/", "sound", true, true);
 Module['FS_createPath']("/", "tileset", true, true);
 
       /** @constructor */
@@ -220,25 +224,25 @@ Module['FS_createPath']("/", "tileset", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/characters/enemy/Slime.png", "start": 0, "end": 3593}, {"filename": "/characters/enemy/Slime2.png", "start": 3593, "end": 7210}, {"filename": "/characters/enemy/Slime3.png", "start": 7210, "end": 10734}, {"filename": "/characters/enemy/Slime4.png", "start": 10734, "end": 14508}, {"filename": "/characters/frog/Attack.png", "start": 14508, "end": 18106}, {"filename": "/characters/frog/Dead14.png", "start": 18106, "end": 21111}, {"filename": "/characters/frog/Idle.png", "start": 21111, "end": 24548}, {"filename": "/characters/frog/Item.png", "start": 24548, "end": 27532}, {"filename": "/characters/frog/Jump.png", "start": 27532, "end": 31141}, {"filename": "/characters/frog/Special.png", "start": 31141, "end": 34619}, {"filename": "/characters/frog/Special1.png", "start": 34619, "end": 37609}, {"filename": "/characters/frog/Special2.png", "start": 37609, "end": 40594}, {"filename": "/characters/frog/Walk.png", "start": 40594, "end": 44989}, {"filename": "/characters/frog/weapon_sword.png", "start": 44989, "end": 45200}, {"filename": "/characters/frog/weapon_sword_1.png", "start": 45200, "end": 45475}, {"filename": "/nature_tileset/.gitkeep", "start": 45475, "end": 45475}, {"filename": "/nature_tileset/Bush.png", "start": 45475, "end": 45913}, {"filename": "/nature_tileset/Log.png", "start": 45913, "end": 46285}, {"filename": "/nature_tileset/OpenWorldMap24x24.png", "start": 46285, "end": 99733}, {"filename": "/nature_tileset/Rock.png", "start": 99733, "end": 100179}, {"filename": "/nature_tileset/Sign.png", "start": 100179, "end": 100531}, {"filename": "/tileset/OpenWorldBase24x24.png", "start": 100531, "end": 124840}, {"filename": "/tileset/OpenWorldMap24x24.tmx", "start": 124840, "end": 135718}, {"filename": "/tileset/OpenWorldTop24x24.png", "start": 135718, "end": 145198}, {"filename": "/tileset/TilesetFloor.tsx", "start": 145198, "end": 145483}, {"filename": "/tileset/TilesetNature.tsx", "start": 145483, "end": 145770}, {"filename": "/tileset/TilesetVillageAbandoned.tsx", "start": 145770, "end": 146077}], "remote_package_size": 146077});
+    loadPackage({"files": [{"filename": "/Ui/Health/empty.png", "start": 0, "end": 3020}, {"filename": "/Ui/Health/full.png", "start": 3020, "end": 6060}, {"filename": "/Ui/Health/high.png", "start": 6060, "end": 9180}, {"filename": "/Ui/Health/low.png", "start": 9180, "end": 12294}, {"filename": "/Ui/Health/med.png", "start": 12294, "end": 15420}, {"filename": "/Ui/Health/verylow.png", "start": 15420, "end": 18514}, {"filename": "/characters/enemy/Slime.png", "start": 18514, "end": 22107}, {"filename": "/characters/enemy/Slime2.png", "start": 22107, "end": 25724}, {"filename": "/characters/enemy/Slime3.png", "start": 25724, "end": 29248}, {"filename": "/characters/enemy/Slime4.png", "start": 29248, "end": 33022}, {"filename": "/characters/frog/Attack.png", "start": 33022, "end": 36620}, {"filename": "/characters/frog/Dead.png", "start": 36620, "end": 39625}, {"filename": "/characters/frog/Idle.png", "start": 39625, "end": 43062}, {"filename": "/characters/frog/Item.png", "start": 43062, "end": 46046}, {"filename": "/characters/frog/Jump.png", "start": 46046, "end": 49655}, {"filename": "/characters/frog/Special.png", "start": 49655, "end": 53133}, {"filename": "/characters/frog/Special1.png", "start": 53133, "end": 56123}, {"filename": "/characters/frog/Special2.png", "start": 56123, "end": 59108}, {"filename": "/characters/frog/Walk.png", "start": 59108, "end": 63503}, {"filename": "/characters/frog/weapon_sword.png", "start": 63503, "end": 63714}, {"filename": "/characters/frog/weapon_sword_1.png", "start": 63714, "end": 63989}, {"filename": "/music/kokoro.ogg", "start": 63989, "end": 5306837, "audio": 1}, {"filename": "/props/Bush.png", "start": 5306837, "end": 5307186}, {"filename": "/props/Flower1.png", "start": 5307186, "end": 5307558}, {"filename": "/props/Flower2.png", "start": 5307558, "end": 5307977}, {"filename": "/props/Flower3.png", "start": 5307977, "end": 5308300}, {"filename": "/props/House.png", "start": 5308300, "end": 5309569}, {"filename": "/props/Log.png", "start": 5309569, "end": 5309941}, {"filename": "/props/Plant.png", "start": 5309941, "end": 5310589}, {"filename": "/props/Rock.png", "start": 5310589, "end": 5311035}, {"filename": "/props/Tree.png", "start": 5311035, "end": 5311997}, {"filename": "/props/Vine.png", "start": 5311997, "end": 5312315}, {"filename": "/sound/Alert.wav", "start": 5312315, "end": 5399451, "audio": 1}, {"filename": "/sound/Attack.wav", "start": 5399451, "end": 5420339, "audio": 1}, {"filename": "/sound/GameOver.wav", "start": 5420339, "end": 5843743, "audio": 1}, {"filename": "/sound/Health.wav", "start": 5843743, "end": 5927155, "audio": 1}, {"filename": "/sound/MiniImpact.wav", "start": 5927155, "end": 5958407, "audio": 1}, {"filename": "/sound/Sword.wav", "start": 5958407, "end": 5977233, "audio": 1}, {"filename": "/tileset/OpenWorldBase24x24.png", "start": 5977233, "end": 6001542}, {"filename": "/tileset/OpenWorldMap24x24.tmx", "start": 6001542, "end": 6012420}, {"filename": "/tileset/OpenWorldTop24x24.png", "start": 6012420, "end": 6021900}, {"filename": "/tileset/TilesetFloor.tsx", "start": 6021900, "end": 6022185}, {"filename": "/tileset/TilesetNature.tsx", "start": 6022185, "end": 6022472}, {"filename": "/tileset/TilesetVillageAbandoned.tsx", "start": 6022472, "end": 6022779}], "remote_package_size": 6022779});
 
   })();
 
-// end include: /run/user/1000/tmp01e9klwm.js
-// include: /run/user/1000/tmpk3r4lmxd.js
+// end include: /run/user/1000/tmp8grojvb_.js
+// include: /run/user/1000/tmp4x18ld1e.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if (Module['$ww'] || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /run/user/1000/tmpk3r4lmxd.js
-// include: /run/user/1000/tmpviv_9_gg.js
+  // end include: /run/user/1000/tmp4x18ld1e.js
+// include: /run/user/1000/tmpecweo8t1.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /run/user/1000/tmpviv_9_gg.js
+  // end include: /run/user/1000/tmpecweo8t1.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -1118,6 +1122,18 @@ function dbg(...args) {
 // end include: runtime_debug.js
 // === Body ===
 
+var ASM_CONSTS = {
+  128265: ($0, $1, $2, $3, $4) => { if (typeof window === 'undefined' || (window.AudioContext || window.webkitAudioContext) === undefined) { return 0; } if (typeof(window.miniaudio) === 'undefined') { window.miniaudio = { referenceCount: 0 }; window.miniaudio.device_type = {}; window.miniaudio.device_type.playback = $0; window.miniaudio.device_type.capture = $1; window.miniaudio.device_type.duplex = $2; window.miniaudio.device_state = {}; window.miniaudio.device_state.stopped = $3; window.miniaudio.device_state.started = $4; miniaudio.devices = []; miniaudio.track_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == null) { miniaudio.devices[iDevice] = device; return iDevice; } } miniaudio.devices.push(device); return miniaudio.devices.length - 1; }; miniaudio.untrack_device_by_index = function(deviceIndex) { miniaudio.devices[deviceIndex] = null; while (miniaudio.devices.length > 0) { if (miniaudio.devices[miniaudio.devices.length-1] == null) { miniaudio.devices.pop(); } else { break; } } }; miniaudio.untrack_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == device) { return miniaudio.untrack_device_by_index(iDevice); } } }; miniaudio.get_device_by_index = function(deviceIndex) { return miniaudio.devices[deviceIndex]; }; miniaudio.unlock_event_types = (function(){ return ['touchend', 'click']; })(); miniaudio.unlock = function() { for(var i = 0; i < miniaudio.devices.length; ++i) { var device = miniaudio.devices[i]; if (device != null && device.webaudio != null && device.state === window.miniaudio.device_state.started) { device.webaudio.resume().then(() => { Module._ma_device__on_notification_unlocked(device.pDevice); }, (error) => {console.error("Failed to resume audiocontext", error); }); } } miniaudio.unlock_event_types.map(function(event_type) { document.removeEventListener(event_type, miniaudio.unlock, true); }); }; miniaudio.unlock_event_types.map(function(event_type) { document.addEventListener(event_type, miniaudio.unlock, true); }); } window.miniaudio.referenceCount += 1; return 1; },  
+ 130423: () => { if (typeof(window.miniaudio) !== 'undefined') { window.miniaudio.referenceCount -= 1; if (window.miniaudio.referenceCount === 0) { delete window.miniaudio; } } },  
+ 130587: () => { return (navigator.mediaDevices !== undefined && navigator.mediaDevices.getUserMedia !== undefined); },  
+ 130691: () => { try { var temp = new (window.AudioContext || window.webkitAudioContext)(); var sampleRate = temp.sampleRate; temp.close(); return sampleRate; } catch(e) { return 0; } },  
+ 130862: ($0, $1, $2, $3, $4, $5) => { var deviceType = $0; var channels = $1; var sampleRate = $2; var bufferSize = $3; var pIntermediaryBuffer = $4; var pDevice = $5; if (typeof(window.miniaudio) === 'undefined') { return -1; } var device = {}; var audioContextOptions = {}; if (deviceType == window.miniaudio.device_type.playback && sampleRate != 0) { audioContextOptions.sampleRate = sampleRate; } device.webaudio = new (window.AudioContext || window.webkitAudioContext)(audioContextOptions); device.webaudio.suspend(); device.state = window.miniaudio.device_state.stopped; var channelCountIn = 0; var channelCountOut = channels; if (deviceType != window.miniaudio.device_type.playback) { channelCountIn = channels; } device.scriptNode = device.webaudio.createScriptProcessor(bufferSize, channelCountIn, channelCountOut); device.scriptNode.onaudioprocess = function(e) { if (device.intermediaryBufferView == null || device.intermediaryBufferView.length == 0) { device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, pIntermediaryBuffer, bufferSize * channels); } if (deviceType == miniaudio.device_type.capture || deviceType == miniaudio.device_type.duplex) { for (var iChannel = 0; iChannel < channels; iChannel += 1) { var inputBuffer = e.inputBuffer.getChannelData(iChannel); var intermediaryBuffer = device.intermediaryBufferView; for (var iFrame = 0; iFrame < bufferSize; iFrame += 1) { intermediaryBuffer[iFrame*channels + iChannel] = inputBuffer[iFrame]; } } _ma_device_process_pcm_frames_capture__webaudio(pDevice, bufferSize, pIntermediaryBuffer); } if (deviceType == miniaudio.device_type.playback || deviceType == miniaudio.device_type.duplex) { _ma_device_process_pcm_frames_playback__webaudio(pDevice, bufferSize, pIntermediaryBuffer); for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { var outputBuffer = e.outputBuffer.getChannelData(iChannel); var intermediaryBuffer = device.intermediaryBufferView; for (var iFrame = 0; iFrame < bufferSize; iFrame += 1) { outputBuffer[iFrame] = intermediaryBuffer[iFrame*channels + iChannel]; } } } else { for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { e.outputBuffer.getChannelData(iChannel).fill(0.0); } } }; if (deviceType == miniaudio.device_type.capture || deviceType == miniaudio.device_type.duplex) { navigator.mediaDevices.getUserMedia({audio:true, video:false}) .then(function(stream) { device.streamNode = device.webaudio.createMediaStreamSource(stream); device.streamNode.connect(device.scriptNode); device.scriptNode.connect(device.webaudio.destination); }) .catch(function(error) { console.log("Failed to get user media: " + error); }); } if (deviceType == miniaudio.device_type.playback) { device.scriptNode.connect(device.webaudio.destination); } device.pDevice = pDevice; return miniaudio.track_device(device); },  
+ 133690: ($0) => { return miniaudio.get_device_by_index($0).webaudio.sampleRate; },  
+ 133756: ($0) => { var device = miniaudio.get_device_by_index($0); if (device.scriptNode !== undefined) { device.scriptNode.onaudioprocess = function(e) {}; device.scriptNode.disconnect(); device.scriptNode = undefined; } if (device.streamNode !== undefined) { device.streamNode.disconnect(); device.streamNode = undefined; } device.webaudio.close(); device.webaudio = undefined; device.pDevice = undefined; },  
+ 134149: ($0) => { miniaudio.untrack_device_by_index($0); },  
+ 134192: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.resume(); device.state = miniaudio.device_state.started; },  
+ 134317: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.suspend(); device.state = miniaudio.device_state.stopped; }
+};
 function GetWindowInnerWidth() { return window.innerWidth; }
 function GetWindowInnerHeight() { return window.innerHeight; }
 
@@ -4159,9 +4175,43 @@ function GetWindowInnerHeight() { return window.innerHeight; }
 
   var __emscripten_memcpy_js = (dest, src, num) => HEAPU8.copyWithin(dest, src, src + num);
 
-  var _emscripten_console_log = (str) => {
-      assert(typeof str == 'number');
-      console.log(UTF8ToString(str));
+  var readEmAsmArgsArray = [];
+  var readEmAsmArgs = (sigPtr, buf) => {
+      // Nobody should have mutated _readEmAsmArgsArray underneath us to be something else than an array.
+      assert(Array.isArray(readEmAsmArgsArray));
+      // The input buffer is allocated on the stack, so it must be stack-aligned.
+      assert(buf % 16 == 0);
+      readEmAsmArgsArray.length = 0;
+      var ch;
+      // Most arguments are i32s, so shift the buffer pointer so it is a plain
+      // index into HEAP32.
+      while (ch = HEAPU8[sigPtr++]) {
+        var chr = String.fromCharCode(ch);
+        var validChars = ['d', 'f', 'i', 'p'];
+        assert(validChars.includes(chr), `Invalid character ${ch}("${chr}") in readEmAsmArgs! Use only [${validChars}], and do not specify "v" for void return argument.`);
+        // Floats are always passed as doubles, so all types except for 'i'
+        // are 8 bytes and require alignment.
+        var wide = (ch != 105);
+        wide &= (ch != 112);
+        buf += wide && (buf % 8) ? 4 : 0;
+        readEmAsmArgsArray.push(
+          // Special case for pointers under wasm64 or CAN_ADDRESS_2GB mode.
+          ch == 112 ? HEAPU32[((buf)>>2)] :
+          ch == 105 ?
+            HEAP32[((buf)>>2)] :
+            HEAPF64[((buf)>>3)]
+        );
+        buf += wide ? 8 : 4;
+      }
+      return readEmAsmArgsArray;
+    };
+  var runEmAsmFunction = (code, sigPtr, argbuf) => {
+      var args = readEmAsmArgs(sigPtr, argbuf);
+      assert(ASM_CONSTS.hasOwnProperty(code), `No EM_ASM constant found at address ${code}.  The loaded WebAssembly file is likely out of sync with the generated JavaScript.`);
+      return ASM_CONSTS[code](...args);
+    };
+  var _emscripten_asm_const_int = (code, sigPtr, argbuf) => {
+      return runEmAsmFunction(code, sigPtr, argbuf);
     };
 
   var _emscripten_date_now = () => Date.now();
@@ -9428,7 +9478,7 @@ var wasmImports = {
   /** @export */
   _emscripten_memcpy_js: __emscripten_memcpy_js,
   /** @export */
-  emscripten_console_log: _emscripten_console_log,
+  emscripten_asm_const_int: _emscripten_asm_const_int,
   /** @export */
   emscripten_date_now: _emscripten_date_now,
   /** @export */
@@ -9956,6 +10006,11 @@ var _main = Module['_main'] = createExportWrapper('main', 2);
 var _malloc = createExportWrapper('malloc', 1);
 var _free = createExportWrapper('free', 1);
 var _fflush = createExportWrapper('fflush', 1);
+var _ma_device__on_notification_unlocked = Module['_ma_device__on_notification_unlocked'] = createExportWrapper('ma_device__on_notification_unlocked', 1);
+var _ma_malloc_emscripten = Module['_ma_malloc_emscripten'] = createExportWrapper('ma_malloc_emscripten', 2);
+var _ma_free_emscripten = Module['_ma_free_emscripten'] = createExportWrapper('ma_free_emscripten', 2);
+var _ma_device_process_pcm_frames_capture__webaudio = Module['_ma_device_process_pcm_frames_capture__webaudio'] = createExportWrapper('ma_device_process_pcm_frames_capture__webaudio', 3);
+var _ma_device_process_pcm_frames_playback__webaudio = Module['_ma_device_process_pcm_frames_playback__webaudio'] = createExportWrapper('ma_device_process_pcm_frames_playback__webaudio', 3);
 var _strerror = createExportWrapper('strerror', 1);
 var _emscripten_stack_init = () => (_emscripten_stack_init = wasmExports['emscripten_stack_init'])();
 var _emscripten_stack_get_free = () => (_emscripten_stack_get_free = wasmExports['emscripten_stack_get_free'])();
@@ -9964,6 +10019,7 @@ var _emscripten_stack_get_end = () => (_emscripten_stack_get_end = wasmExports['
 var __emscripten_stack_restore = (a0) => (__emscripten_stack_restore = wasmExports['_emscripten_stack_restore'])(a0);
 var __emscripten_stack_alloc = (a0) => (__emscripten_stack_alloc = wasmExports['_emscripten_stack_alloc'])(a0);
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
+var dynCall_vi = Module['dynCall_vi'] = createExportWrapper('dynCall_vi', 2);
 var dynCall_vif = Module['dynCall_vif'] = createExportWrapper('dynCall_vif', 3);
 var dynCall_v = Module['dynCall_v'] = createExportWrapper('dynCall_v', 1);
 var dynCall_vii = Module['dynCall_vii'] = createExportWrapper('dynCall_vii', 3);
@@ -9973,7 +10029,11 @@ var dynCall_viiii = Module['dynCall_viiii'] = createExportWrapper('dynCall_viiii
 var dynCall_vidd = Module['dynCall_vidd'] = createExportWrapper('dynCall_vidd', 4);
 var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii', 2);
 var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii', 4);
-var dynCall_vi = Module['dynCall_vi'] = createExportWrapper('dynCall_vi', 2);
+var dynCall_iii = Module['dynCall_iii'] = createExportWrapper('dynCall_iii', 3);
+var dynCall_iiiii = Module['dynCall_iiiii'] = createExportWrapper('dynCall_iiiii', 5);
+var dynCall_iiiji = Module['dynCall_iiiji'] = createExportWrapper('dynCall_iiiji', 6);
+var dynCall_iiiiiii = Module['dynCall_iiiiiii'] = createExportWrapper('dynCall_iiiiiii', 7);
+var dynCall_jii = Module['dynCall_jii'] = createExportWrapper('dynCall_jii', 3);
 var dynCall_vffff = Module['dynCall_vffff'] = createExportWrapper('dynCall_vffff', 5);
 var dynCall_vf = Module['dynCall_vf'] = createExportWrapper('dynCall_vf', 2);
 var dynCall_viiiiiiii = Module['dynCall_viiiiiiii'] = createExportWrapper('dynCall_viiiiiiii', 9);
@@ -9981,7 +10041,6 @@ var dynCall_viiiiiiiii = Module['dynCall_viiiiiiiii'] = createExportWrapper('dyn
 var dynCall_i = Module['dynCall_i'] = createExportWrapper('dynCall_i', 1);
 var dynCall_vff = Module['dynCall_vff'] = createExportWrapper('dynCall_vff', 3);
 var dynCall_viiiiiii = Module['dynCall_viiiiiii'] = createExportWrapper('dynCall_viiiiiii', 8);
-var dynCall_iii = Module['dynCall_iii'] = createExportWrapper('dynCall_iii', 3);
 var dynCall_vfi = Module['dynCall_vfi'] = createExportWrapper('dynCall_vfi', 3);
 var dynCall_viif = Module['dynCall_viif'] = createExportWrapper('dynCall_viif', 4);
 var dynCall_viff = Module['dynCall_viff'] = createExportWrapper('dynCall_viff', 4);
@@ -10029,7 +10088,7 @@ var missingLibrarySymbols = [
   'readSockaddr',
   'writeSockaddr',
   'emscriptenLog',
-  'readEmAsmArgs',
+  'runMainThreadEmAsm',
   'getExecutableName',
   'listenOnce',
   'autoResumeAudioContext',
@@ -10176,6 +10235,8 @@ var unexportedSymbols = [
   'timers',
   'warnOnce',
   'readEmAsmArgsArray',
+  'readEmAsmArgs',
+  'runEmAsmFunction',
   'jstoi_q',
   'jstoi_s',
   'handleException',
